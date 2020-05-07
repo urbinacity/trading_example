@@ -1,0 +1,642 @@
+<style type="text/css">
+    .ps-content-wrapper-v0 div {
+        margin: 0 auto;
+        overflow: auto;
+    }
+
+    .ps-content-wrapper-v0 div.preheader {
+        display: none;
+    }
+
+    .ps-content-wrapper-v0 p {
+        white-space: pre-wrap;
+        padding-left: 4px;
+        padding-right: 4px;
+        padding-top: 0px;
+        padding-bottom: 2px;
+    }
+
+    .ps-content-wrapper-v0 p.section-title {
+        font-weight: bold;
+        padding-bottom: 0px;
+    }
+
+    .ps-content-wrapper-v0 ol.plain-list,
+    .ps-content-wrapper-v0 ul.plain-list {
+        list-style-type: none;
+        padding: 4px;
+    }
+
+    .ps-content-wrapper-v0 li {
+        white-space: normal;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+    .ps-content-wrapper-v0 code {
+        color: black;
+    }
+
+    .ps-content-wrapper-v0 pre {
+        background-color: #f4faff;
+        border: 0;
+        border-radius: 2px;
+        margin: 8px;
+        padding: 10px;
+    }
+
+    .ps-content-wrapper-v0 figure {
+        background-color: transparent;
+        display: table;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .ps-content-wrapper-v0 figcaption {
+        text-align: center;
+        display: table-caption;
+        caption-side: bottom;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+    .ps-content-wrapper-v0 img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .ps-content-wrapper-v0 details {
+        background-color: transparent;
+        padding-left: 4px;
+        padding-right: 4px;
+        padding-top: 0px;
+        padding-bottom: 2px;
+    }
+
+    .ps-content-wrapper-v0 details details {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .ps-content-wrapper-v0 details summary {
+        background-color: #39424e;
+        color: white;
+        font-weight: bold;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        padding: 8px;
+    }
+
+    .ps-content-wrapper-v0 details details summary code {
+        color: black;
+        font-weight: bold;
+        padding-left: 2px;
+        padding-right: 2px;
+        padding-top: 4px;
+        padding-right: 4px;
+        margin-left: 4px;
+    }
+
+    .ps-content-wrapper-v0 details div.collapsable-details {
+        margin: 0 auto;
+        padding-left: 4px;
+        padding-right: 4px;
+        padding-top: 0px;
+        padding-bottom: 2px;
+        overflow: auto;
+    }
+
+    .ps-content-wrapper-v0 details div.collapsable-details pre {
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+    .ps-content-wrapper-v0 table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        border-color: darkgray;
+        margin: 0 auto;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        padding: 8px;
+        width: 96%;
+        table-layout: fixed;
+    }
+
+    .ps-content-wrapper-v0 table tbody tr th,
+    .ps-content-wrapper-v0 table tbody tr td {
+        font-weight: bold;
+        white-space: nowrap;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid black;
+        border-color: darkgray;
+        padding: 8px;
+    }
+
+    .ps-content-wrapper-v0 table tbody tr th.description {
+        width: 60%;
+    }
+
+    .ps-content-wrapper-v0 table tbody tr td {
+        font-weight: normal;
+        white-space: normal;
+    }
+
+    .ps-content-wrapper-v0 table.function-params tbody tr:first-child td.headers {
+        border-bottom-width: 2px;
+    }
+
+    .ps-content-wrapper-v0 table.function-params tbody tr:last-child td {
+        border-top-width: 2px;
+        border-top-color: darkgray;
+    }
+
+    .ps-content-wrapper-v0 table.function-params tbody tr td.headers {
+        width: 25%;
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid black;
+        border-right-width: 2px;
+        border-color: darkgray;
+    }
+
+    .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+    }
+
+    .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+        border: 0;
+    }
+
+    .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr td.code {
+        white-space: normal;
+    }
+
+    .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr th {
+        border-top: 0;
+    }
+
+    .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr th:first-child {
+        border-left: 0;
+    }
+
+    .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr th:last-child {
+        border-right: 0;
+    }
+
+    .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr:last-child td {
+        border-bottom: 0;
+        border-top-width: 1px;
+    }
+
+    .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr td:first-child {
+        border-left: 0;
+    }
+
+    .ps-content-wrapper-v0 table.function-params tbody tr td.params-table-cell table.params-table tbody tr td:last-child {
+        border-right: 0;
+    }
+
+    .ps-content-wrapper-v0 .left {
+        text-align: left;
+    }
+
+    .ps-content-wrapper-v0 .right {
+        text-align: right;
+    }
+
+    .ps-content-wrapper-v0 .code {
+        font-family: monospace;
+        white-space: nowrap;
+    }
+
+    .ps-content-wrapper-v0 .json-object-array ol,
+    .ps-content-wrapper-v0 .json-object-array ol ul {
+        margin-top: 0px;
+        padding-left: 14px;
+    }
+
+    .json-object-array li {
+        float: left;
+        margin-right: 30px;
+        margin-left: 10px;
+    }
+
+    .json-object-array pre {
+        padding: 4px;
+        margin-left: 0px;
+    }
+</style>
+<div class="ps-content-wrapper-v0">
+    <p>In this challenge, you are part of a team building a brokerage company&#39;s accounts and trading management
+        platform. One requirement is for a REST API service to manage trades using the Nodejs Express framework. You
+        will need to add functionality to add and delete transactions as well as to perform some queries. You&#39;ll be
+        dealing with typical information for financial transactions like account ownership data, shares, price,
+        transaction time, etc. The team has come up with a set of requirements including filtering and ordering
+        requirements, response codes and error messages for the queries you must implement.</p>
+
+    <p>&nbsp;</p>
+
+    <p>The definitions and a detailed requirements list follow. You will be graded on whether your application performs
+        data retrieval and manipulation based on given use cases exactly as described in the requirements.</p>
+
+    <p>&nbsp;</p>
+
+    <p>Each trade is a JSON entry with the following keys:</p>
+
+    <ul>
+        <li><code>id</code>: The unique ID of the trade.</li>
+        <li><code>type</code>: The trade type, either <em>buy</em> or <em>sell</em>.</li>
+        <li><code>user</code>: The user responsible for the trade, a JSON entry:
+            <ul>
+                <li><code>id</code>: The user&#39;s unique ID.</li>
+                <li><code>name</code>: The user&#39;s name.</li>
+            </ul>
+        </li>
+        <li><code>symbol</code>: The stock symbol.</li>
+        <li><code>shares</code>: The total number of shares traded. The traded shares value is between <em>10</em> and
+            <em>30</em> shares, inclusive.</li>
+        <li><code>price</code>: The price of one share of stock at the time of the trade (up to two places of decimal).
+            The stock price is between <em>130.42</em> and <em>195.65</em> inclusive.</li>
+        <li><code>timestamp</code>: The timestamp for the trade creation given in the format
+            <code>yyyy-MM-dd HH:mm:ss</code>. The timezone is <code>EST</code> (<code>UTC -4</code>).</li>
+    </ul>
+
+    <p>&nbsp;</p>
+
+    <details>
+        <summary class="section-title">Sample JSON Trade object</summary>
+
+        <pre>
+{
+&quot;id&quot;: 1,
+&quot;type&quot;: &quot;buy&quot;,
+&quot;user&quot;: {
+&quot;id&quot;: 1,
+&quot;name&quot;: &quot;David&quot;
+},
+&quot;symbol&quot;: &quot;AC&quot;,
+&quot;shares&quot;: 28,
+&quot;price&quot;: 162.17,
+&quot;timestamp&quot;: &quot;2014-06-14 13:13:13&quot;
+}</pre>
+    </details>
+
+    <p>&nbsp;</p>
+
+    <p>The <em>REST</em> service should implement the following functionalities:</p>
+
+    <ol>
+        <li><em>Erasing all the trades</em>: The service should be able to erase all the trades by the <em>DELETE</em>
+            request at <code>/erase</code>. The <em>HTTP</em> response code should be <em>200</em>.</li>
+        <li><em>Adding new trades</em>: The service should be able to add a new <em>trade</em> by the <em>POST</em>
+            request at <code>/trades</code>. The event <em>JSON</em> is sent in the request body. If a trade with the
+            same id already exists then the <em>HTTP</em> response code should be <em>400</em>, otherwise, the response
+            code should be <em>201</em>.</li>
+        <li><em>Returning all the trades</em>: The service should be able to return the JSON array of all the trades
+            through a <em>GET</em> request at <code>/trades</code>. The <em>HTTP</em> response code should be
+            <em>200</em>. The JSON array should be sorted in ascending order by trade ID.</li>
+        <li><em>Returning the trade records filtered by the user ID</em>: The service should be able to return the
+            <em>JSON</em> array of all the trades which are performed by the user ID through a <em>GET</em> request at
+            <code>/trades/users/{userID}</code>. If the requested user does not exist then the <em>HTTP</em> response
+            code should be <em>404</em>, otherwise, the response code should be <em>200</em>. The JSON array should be
+            sorted in ascending order by trade ID.</li>
+        <li><em>Returning the trade records filtered by the stock symbol and trade type in the given date range</em>:
+            The service should be able to return the <em>JSON</em> array of all the trades which are associated with the
+            stock symbol and the given trade type, i.e., either buy or sell, in the given date range specified by start
+            date and end date inclusive, by the <em>GET</em> request at
+            <code>/stocks/{stockSymbol}/trades?type={tradeType}&amp;start={startDate}&amp;end={endDate}</code>. If the
+            requested stock symbol does not exist then the <em>HTTP</em> response code should be <em>404</em>,
+            otherwise, the response code should be <em>200</em> irrespective of whether or not there are trades
+            associated with the stock symbol in the given date range. The JSON array should be sorted in ascending order
+            by trade ID.</li>
+        <li><em>Returning the highest and lowest price for the stock symbol in the given date range</em>: The service
+            should be able to return the <em>JSON</em> object describing the information of highest and lowest price in
+            the given date range specified by start date and end date inclusive, through a <em>GET</em> request at
+            <code>/stocks/{stockSymbol}/price?start={startDate}&amp;end={endDate}</code>. If the requested stock symbol
+            does not exist then the HTTP response code should be <em>404</em>, otherwise, the response code should be
+            <em>200</em>. The response JSON should consist of the following three fields:
+            <ul>
+                <li><code>symbol</code>: the symbol for the requested stock</li>
+                <li><code>highest</code>: the highest price for the requested stock symbol in the given date range</li>
+                <li><code>lowest</code>: the lowest price for the requested stock symbol in the given date range</li>
+            </ul>
+            If there are no trades for the requested stock symbol, then the response JSON should be:
+
+            <pre>
+{
+&quot;message&quot;:&quot;There are no trades in the given date range&quot;
+}</pre>
+        </li>
+    </ol>
+
+    <p>&nbsp;</p>
+
+    <p>You should complete the given incomplete project so that it passes all the test cases when running the provided
+        unit tests.</p>
+
+    <p>&nbsp;</p>
+
+    <p>&nbsp;</p>
+
+    <details>
+        <summary class="section-title">Sample Series of Requests</summary>
+
+        <div class="collapsable-details">
+            <p>Requests are received in the following order:</p>
+
+            <details>
+                <summary class="section-title">POST <code>/trades</code></summary>
+
+                <div class="collapsable-details">
+                    <p>Consider the following <em>POST</em> requests (these are performed in the ascending order of
+                        trade id):</p>
+
+                    <div class="json-object-array">
+                        <ol>
+                            <li>
+                                <pre>
+{
+&quot;id&quot;: 1,
+&quot;type&quot;: &quot;buy&quot;,
+&quot;user&quot;: {
+&quot;id&quot;: 1,
+&quot;name&quot;: &quot;David&quot;
+},
+&quot;symbol&quot;: &quot;AC&quot;,
+&quot;shares&quot;: 28,
+&quot;price&quot;: 162.17,
+&quot;timestamp&quot;: &quot;2014-06-14 13:13:13&quot;
+}</pre>
+                            </li>
+                            <li>
+                                <pre>
+{
+&quot;id&quot;: 2,
+&quot;type&quot;: &quot;buy&quot;,
+&quot;user&quot;: {
+&quot;id&quot;: 3,
+&quot;name&quot;: &quot;Brandon&quot;
+},
+&quot;symbol&quot;: &quot;ACC&quot;,
+&quot;shares&quot;: 25,
+&quot;price&quot;: 146.09,
+&quot;timestamp&quot;: &quot;2014-06-25 13:40:13&quot;
+}</pre>
+                            </li>
+                            <li>
+                                <pre>
+{
+&quot;id&quot;: 3,
+&quot;type&quot;: &quot;buy&quot;,
+&quot;user&quot;: {
+&quot;id&quot;: 2,
+&quot;name&quot;: &quot;Omar&quot;
+},
+&quot;symbol&quot;: &quot;AC&quot;,
+&quot;shares&quot;: 13,
+&quot;price&quot;: 146.09,
+&quot;timestamp&quot;: &quot;2014-06-25 13:40:13&quot;
+}</pre>
+                            </li>
+                            <li>
+                                <pre>
+{
+&quot;id&quot;: 4,
+&quot;type&quot;: &quot;buy&quot;,
+&quot;user&quot;: {
+&quot;id&quot;: 1,
+&quot;name&quot;: &quot;David&quot;
+},
+&quot;symbol&quot;: &quot;AC&quot;,
+&quot;shares&quot;: 12,
+&quot;price&quot;: 137.39,
+&quot;timestamp&quot;: &quot;2014-06-25 13:44:13&quot;
+}</pre>
+                            </li>
+                            <li>
+                                <pre>
+{
+&quot;id&quot;: 5,
+&quot;type&quot;: &quot;buy&quot;,
+&quot;user&quot;: {
+&quot;id&quot;: 3,
+&quot;name&quot;: &quot;Brandon&quot;
+},
+&quot;symbol&quot;: &quot;AC&quot;,
+&quot;shares&quot;: 15,
+&quot;price&quot;: 161.35,
+&quot;timestamp&quot;: &quot;2014-06-26 13:15:18&quot;
+}</pre>
+                            </li>
+                            <li>
+                                <pre>
+{
+&quot;id&quot;: 6,
+&quot;type&quot;: &quot;sell&quot;,
+&quot;user&quot;: {
+&quot;id&quot;: 3,
+&quot;name&quot;: &quot;Brandon&quot;
+},
+&quot;symbol&quot;: &quot;AC&quot;,
+&quot;shares&quot;: 10,
+&quot;price&quot;: 162.37,
+&quot;timestamp&quot;: &quot;2014-06-26 15:15:18&quot;
+}</pre>
+                            </li>
+                            <li>
+                                <pre>
+{
+&quot;id&quot;: 7,
+&quot;type&quot;: &quot;buy&quot;,
+&quot;user&quot;: {
+&quot;id&quot;: 3,
+&quot;name&quot;: &quot;Brandon&quot;
+},
+&quot;symbol&quot;: &quot;ACC&quot;,
+&quot;shares&quot;: 17,
+&quot;price&quot;: 146.08,
+&quot;timestamp&quot;: &quot;2014-06-27 10:10:31&quot;
+}</pre>
+                            </li>
+                            <li>
+                                <pre>
+{
+&quot;id&quot;: 8,
+&quot;type&quot;: &quot;buy&quot;,
+&quot;user&quot;: {
+&quot;id&quot;: 3,
+&quot;name&quot;: &quot;Brandon&quot;
+},
+&quot;symbol&quot;: &quot;ACC&quot;,
+&quot;shares&quot;: 15,
+&quot;price&quot;: 146.11,
+&quot;timestamp&quot;: &quot;2014-06-27 11:08:23&quot;
+}</pre>
+                            </li>
+                            <li>
+                                <pre>
+{
+&quot;id&quot;: 9,
+&quot;type&quot;: &quot;buy&quot;,
+&quot;user&quot;: {
+&quot;id&quot;: 3,
+&quot;name&quot;: &quot;Brandon&quot;
+},
+&quot;symbol&quot;: &quot;ACC&quot;,
+&quot;shares&quot;: 25,
+&quot;price&quot;: 146.09,
+&quot;timestamp&quot;: &quot;2014-06-27 12:17:17&quot;
+}</pre>
+                            </li>
+                            <li>
+                                <pre>
+{
+&quot;id&quot;: 10,
+&quot;type&quot;: &quot;buy&quot;,
+&quot;user&quot;: {
+&quot;id&quot;: 1,
+&quot;name&quot;: &quot;David&quot;
+},
+&quot;symbol&quot;: &quot;ABR&quot;,
+&quot;shares&quot;: 10,
+&quot;price&quot;: 136.27,
+&quot;timestamp&quot;: &quot;2014-06-28 13:11:13&quot;
+}</pre>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary class="section-title">GET <code>/trades/users/1</code></summary>
+
+                <div class="collapsable-details">
+                    <p>The response of the <em>GET</em> request is the following <em>JSON</em> array with the
+                        <em>HTTP</em> response code <em>200</em>:</p>
+
+                    <pre>
+[
+{
+&quot;id&quot;: 1,
+&quot;type&quot;: &quot;buy&quot;,
+&quot;user&quot;: {
+&quot;id&quot;: 1,
+&quot;name&quot;: &quot;David&quot;
+},
+&quot;symbol&quot;: &quot;AC&quot;,
+&quot;shares&quot;: 28,
+&quot;price&quot;: 162.17,
+&quot;timestamp&quot;: &quot;2014-06-14 13:13:13&quot;
+},
+{
+&quot;id&quot;: 4,
+&quot;type&quot;: &quot;buy&quot;,
+&quot;user&quot;: {
+&quot;id&quot;: 1,
+&quot;name&quot;: &quot;David&quot;
+},
+&quot;symbol&quot;: &quot;AC&quot;,
+&quot;shares&quot;: 12,
+&quot;price&quot;: 137.39,
+&quot;timestamp&quot;: &quot;2014-06-25 13:44:13&quot;
+},
+{
+&quot;id&quot;: 10,
+&quot;type&quot;: &quot;buy&quot;,
+&quot;user&quot;: {
+&quot;id&quot;: 1,
+&quot;name&quot;: &quot;David&quot;
+},
+&quot;symbol&quot;: &quot;ABR&quot;,
+&quot;shares&quot;: 10,
+&quot;price&quot;: 136.27,
+&quot;timestamp&quot;: &quot;2014-06-28 13:11:13&quot;
+}
+]</pre>
+                </div>
+            </details>
+
+            <details>
+                <summary class="section-title">GET
+                    <code>/stocks/AC/trades?type=buy&amp;start=2014-06-25&amp;end=2014-06-26</code></summary>
+
+                <div class="collapsable-details">
+                    <p>The response of the <em>GET</em> request is the following <em>JSON</em> array with the
+                        <em>HTTP</em> response code <em>200</em>:</p>
+
+                    <pre>
+[
+{
+&quot;id&quot;: 3,
+&quot;type&quot;: &quot;buy&quot;,
+&quot;user&quot;: {
+&quot;id&quot;: 2,
+&quot;name&quot;: &quot;Omar&quot;
+},
+&quot;symbol&quot;: &quot;AC&quot;,
+&quot;shares&quot;: 13,
+&quot;price&quot;: 146.09,
+&quot;timestamp&quot;: &quot;2014-06-25 13:40:13&quot;
+},
+{
+&quot;id&quot;: 4,
+&quot;type&quot;: &quot;buy&quot;,
+&quot;user&quot;: {
+&quot;id&quot;: 1,
+&quot;name&quot;: &quot;David&quot;
+},
+&quot;symbol&quot;: &quot;AC&quot;,
+&quot;shares&quot;: 12,
+&quot;price&quot;: 137.39,
+&quot;timestamp&quot;: &quot;2014-06-25 13:44:13&quot;
+},
+{
+&quot;id&quot;: 5,
+&quot;type&quot;: &quot;buy&quot;,
+&quot;user&quot;: {
+&quot;id&quot;: 3,
+&quot;name&quot;: &quot;Brandon&quot;
+},
+&quot;symbol&quot;: &quot;AC&quot;,
+&quot;shares&quot;: 15,
+&quot;price&quot;: 161.35,
+&quot;timestamp&quot;: &quot;2014-06-26 13:15:18&quot;
+}
+]</pre>
+                </div>
+            </details>
+
+            <details>
+                <summary class="section-title">GET <code>/stocks/ACC/price?start=2014-06-25&amp;end=2014-06-26</code>
+                </summary>
+
+                <div class="collapsable-details">
+                    <p>The response of the <em>GET</em> request is the following <em>JSON</em> with the <em>HTTP</em>
+                        response code <em>200</em>:</p>
+
+                    <pre>
+{
+&quot;symbol&quot;: &quot;ACC&quot;,
+&quot;highest&quot;: 146.09,
+&quot;lowest&quot;: 146.09
+}</pre>
+                </div>
+            </details>
+        </div>
+    </details>
+</div>
